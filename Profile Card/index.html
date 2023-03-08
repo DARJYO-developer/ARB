@@ -1,0 +1,42 @@
+<template>
+  <div class="bg-white rounded-lg overflow-hidden">
+    <img class="w-full" :src="user.profilePicture" alt="Profile Picture">
+    <div class="p-6">
+      <div class="flex items-center">
+        <img class="w-10 h-10 rounded-full mr-4" :src="user.profilePicture" alt="Profile Picture">
+        <div class="text-lg">{{ user.name }}</div>
+        <div v-if="user.isVerified" class="ml-2 text-xs font-medium leading-none bg-green-200 text-green-800 rounded-full p-1">Verified</div>
+      </div>
+      <div class="mt-2 text-gray-600">{{ user.bio }}</div>
+      <div class="mt-4">
+        <a :href="user.twitter" class="text-blue-500 hover:underline">{{ user.twitter }}</a>
+        <a :href="user.instagram" class="ml-4 text-blue-500 hover:underline">{{ user.instagram }}</a>
+        <a :href="user.facebook" class="ml-4 text-blue-500 hover:underline">{{ user.facebook }}</a>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      user: {
+        name: 'John Doe',
+        profilePicture: 'https://via.placeholder.com/150',
+        bio: 'Software developer and avid traveler',
+        twitter: 'https://twitter.com/johndoe',
+        instagram: 'https://instagram.com/johndoe',
+        facebook: 'https://facebook.com/johndoe',
+        isVerified: true
+      }
+    }
+  }
+}
+</script>
+
+<style>
+.card:hover {
+  box-shadow: 0px 10px 15px #E0E0E0;
+}
+</style>
