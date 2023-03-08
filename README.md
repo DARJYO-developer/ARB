@@ -11,3 +11,7 @@ Note: In order to use Firebase in your application, you will need to create a pr
 ## 2. Develop the code for a user profile card built using TailwindCSS
 
 Design a user profile card that displays information about a user, such as their name, profile picture, and social media links. Use TailwindCSS to style the card and make it responsive to different screen sizes. The card should also have the ability to display a "verified" badge and have a hover effect.
+
+This code creates a user profile card that displays information about a user, such as their name, profile picture, and social media links. The card is styled using TailwindCSS and is responsive to different screen sizes. The card also has the ability to display a "verified" badge and has a hover effect. The user's data is hardcoded in the component data but it can be passed as a prop from the parent component.
+
+Note: In order to use TailwindCSS in your application, you will need to install it and import it in your application.
